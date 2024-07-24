@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://nl515cisb5bw"]
+
+[node name="Game_over" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 374.0
+offset_top = 127.0
+offset_right = 414.0
+offset_bottom = 150.0
+text = "Game Over
+you lose
+"

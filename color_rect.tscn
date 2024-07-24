@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7ldtfoiuy4pr"]
+
+[ext_resource type="Texture2D" uid="uid://bdi02q4uwtd1d" path="res://Slut.png" id="1_tjh4e"]
+
+[node name="ColorRect" type="Sprite2D"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_tjh4e")

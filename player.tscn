@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://44pxeladkudf"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_46xxj"]
+[ext_resource type="Texture2D" uid="uid://eukioo8k3pn0" path="res://Head.png" id="2_506lp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pqda5"]
+radius = 13.0
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_46xxj")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 30.0
+offset_bottom = 30.0
+scale = Vector2(0.5, 0.5)
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 10.0
+offset_right = 35.0
+offset_bottom = 16.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 22.0
+offset_right = 35.0
+offset_bottom = 28.0
+color = Color(0, 0, 0, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_506lp")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_pqda5")
+
+[node name="Area2D2" type="Area2D" parent="."]
+collision_layer = 32
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+shape = SubResource("CircleShape2D_pqda5")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Area2D2" to="." method="_on_area_2d_2_area_entered"]
